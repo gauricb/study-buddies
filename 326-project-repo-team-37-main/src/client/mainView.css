@@ -1,0 +1,467 @@
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #643c0f;
+  font-size: 20px;
+  border-color: transparent;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 500px;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 0;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 768px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {
+    height: auto;
+  }
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #f2e1c1;
+}
+
+body {
+  font-family: "Bradley Hand";
+  font-style: bold;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  border: 55.5px solid #643c0f;
+  border-top: 10px;
+  background-image: url("cork.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #f9f6f1;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f9f6f1;
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #8c612f;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #855d2f;
+  text-align: center;
+}
+
+.calendar {
+  width: 56%;
+  height: 45vh;
+  float: left;
+  position: relative;
+  transform: rotate(0deg);
+  border: 6px solid #624a2e;
+  flex-direction: column;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  position: relative;
+  table-layout: fixed;
+  flex-grow: 1;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+th {
+  background-color: #ccc;
+}
+
+td {
+  background-color: #fff;
+  height: 300%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+td,
+th {
+  font-size: 13px;
+  color: #333;
+}
+
+.deadlines {
+  width: 56%;
+  height: 20vh;
+  float: left;
+  margin-right: 15px;
+  position: relative;
+  transform: rotate(0deg);
+  border-radius: 10px;
+  border: 6px solid #624a2e;
+}
+
+.tape {
+  position: absolute;
+  top: -10px;
+  left: 25%;
+  width: 50%;
+  height: 30px;
+  background: linear-gradient(
+    to bottom,
+    rgba(77, 76, 76, 0.1) 0%,
+    rgba(54, 54, 54, 0.5) 50%,
+    rgba(104, 103, 103, 0.1) 100%
+  );
+}
+.line {
+  position: relative;
+  width: 10px;
+  height: 30px;
+  background-color: #624a2e;
+  z-index: -1;
+  top: -28%;
+}
+.line-left {
+  position: absolute;
+  left: -6px;
+  width: 6px;
+  height: 30%;
+}
+.line-right {
+  position: absolute;
+  right: -6px;
+  width: 6px;
+  height: 30%;
+}
+
+.to-do-list {
+  width: 20%;
+  height: 68vh;
+  display: inline-block;
+  margin-right: 15px;
+  transform: rotate(0.5deg);
+  background-color: rgb(195, 251, 251);
+  border-radius: 0;
+}
+
+.card-wrapper {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.upcoming {
+  margin-bottom: 15px;
+  transform: rotate(-2deg);
+  background-color: rgb(251, 195, 248);
+}
+
+.notes {
+  transform: rotate(2deg);
+  background-color: rgb(231, 199, 255);
+}
+
+.upcoming,
+.notes {
+  width: 100%;
+  height: 33vh;
+  display: block;
+  margin-top: 2px;
+}
+
+#todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#todo-list li {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 0pt;
+}
+
+h2 {
+  margin-top: -1px;
+  margin-bottom: 15px;
+  font-size: 33px;
+  font-weight: bold;
+}
+h1 {
+  margin-top: -10px;
+}
+
+h6 {
+  bottom: 20px;
+  margin: 0;
+  margin-bottom: -15px;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 0;
+}
+#my-table {
+  height: 100%;
+  width: 100%;
+}
+
+#edit {
+  padding: 5px;
+  outline: none;
+}
+
+button:hover {
+  box-shadow: 2px 2px 3px;
+}
+
+button:active {
+  box-shadow: 1px 1px 3px;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border-color: transparent;
+  text-align: left;
+  font-size: 100%;
+}
+.pin {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-image: radial-gradient(rgb(219, 75, 2) 50%, rgb(22, 4, 4) 100%);
+  position: absolute;
+  z-index: -1;
+}
+
+.pin-center {
+  top: -10px;
+  left: 50%;
+}
+
+.pin {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    circle at 45% 45%,
+    #db4b02 50%,
+    #160404 100%
+  );
+  position: absolute;
+}
+
+.pin-top-left {
+  top: 2px;
+  left: 2px;
+}
+
+.pin-top-right {
+  top: 2px;
+  right: 2px;
+}
+
+.pin-bottom-left {
+  bottom: 2px;
+  left: 2px;
+}
+
+.pin-bottom-right {
+  bottom: 2px;
+  right: 2px;
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid black;
+  z-index: 1;
+}
+
+.deadline-edit-popup h3 {
+  margin-top: 0;
+}
+
+.deadline-edit-popup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.deadline-edit-popup button {
+  margin-top: 10px;
+}
+
+.deadline-edit-popup input[type="text"],
+.popup input[type="color"],
+.popup select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.edit-button {
+  width: 130px;
+  height: 30px;
+  background-image: url("edit.jpeg");
+  background-size: cover;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  right: 63%;
+  z-index: 1;
+}
+.image1-button {
+  width: 140px;
+  height: 35px;
+  margin-top: 10px;
+  margin-right: 5px;
+  background-image: url("marker.jpeg");
+  background-size: cover;
+  border: none;
+  bottom: 10px;
+  bottom: 0;
+  right: 50%;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.image2-button {
+  width: 95px;
+  height: 45px;
+  margin-top: 10px;
+  margin-left: 5px;
+  background-image: url("eraser.jpeg");
+  background-size: cover;
+  border: none;
+  bottom: 0;
+  position: absolute;
+  left: 55%;
+}
+.image3-button {
+  width: 130px;
+  height: 30px;
+  margin-top: 10px;
+  background-image: url("add_pencil.jpeg");
+  background-size: cover;
+  border: none;
+}
+.image4-button {
+  width: 100px;
+  height: 33px;
+  margin-top: 5px;
+  background-image: url("eraser_pink.jpeg");
+  background-size: cover;
+  border: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image5-button {
+  width: 91px;
+  height: 45px;
+  margin: 0;
+  background-image: url("write_button.png");
+  background-size: cover;
+  border: none;
+}
+
+.image6-button {
+  width: 90px;
+  height: 45px;
+  margin: 0;
+  background-image: url("done_button.png");
+  background-size: cover;
+  border: none;
+}
+.erase-button {
+  width: 85px;
+  height: 40px;
+  background-image: url("green_eraser.jpeg");
+  background-size: cover;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+  z-index: 1;
+}
+
+li {
+  display: flex;
+  justify-content: space-around;
+}
+
+li .pencil_button {
+  order: 2;
+}

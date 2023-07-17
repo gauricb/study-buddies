@@ -1,0 +1,20 @@
+[
+    {
+        "firstName": "Rob",
+        "lastName": "Dell",
+        "username": "rdell@gmail.com", 
+        "password": "iloveMicrosoft"
+    },
+    {
+        "firstName": "Delia",
+        "lastName": "Rell",
+        "username": "drell@gmail.com", 
+        "password": "iloveApple"
+    },
+    {
+        "firstName": "Janet",
+        "lastName": "Jackson",
+        "username": "jjackson@gmail.com", 
+        "password": "iloveMusic"
+    }
+]

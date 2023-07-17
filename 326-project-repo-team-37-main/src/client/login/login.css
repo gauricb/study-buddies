@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.img {
+  flex: 1;
+  background-color: #ccc;
+  background-image: url("../dalle-pic.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe6c9;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+}
+#signIn {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #008cba;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #366471;
+}
+
+p {
+  display: inline;
+  margin-top: 20px;
+}
+
+a {
+  display: inline;
+  text-decoration: none;
+  color: #008cba;
+}
+
+#appName {
+  width: 519px;
+  height: 120px;
+
+  font-family: "Gloria Hallelujah", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 107px;
+
+  letter-spacing: 0.02em;
+
+  color: #ad7b40;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script type="module" src="index.js"></script>
+  <script type="module" src="crud.js"></script>
+  <script type="module" src="render.js"></script>
+  <script
+    src="https://kit.fontawesome.com/0259b86787.js"
+    crossorigin="anonymous"
+  ></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Buddies Bulletin Board</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+  </head>
+  <link rel="stylesheet" href="mainView.css" />
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#" id="hello-name-display"></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://localhost:3000/index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <div class="container">
+      <div class="image-container">
+      </div>
+      <div class="header">Study Buddies
+      </div>
+      <div class="card calendar">
+        <h1>Weekly Calendar</h1>
+        <div class="pin pin-top-left"></div>
+        <div class="pin pin-top-right"></div>
+        <div class="pin pin-bottom-left"></div>
+        <div class="pin pin-bottom-right"></div>
+        <div class="card-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="sunday" class="calendar-cell"></td>
+                <td id="monday" class="calendar-cell"></td>
+                <td id="tuesday" class="calendar-cell"></td>
+                <td id="wednesday" class="calendar-cell"></td>
+                <td id="thursday" class="calendar-cell"></td>
+                <td id="friday" class="calendar-cell"></td>
+                <td id="saturday" class="calendar-cell"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button id="calendar-update-button" class="image1-button"></button>
+        <button id="calendar-remove-button" class="image2-button"></button>
+      </div>
+      <div id="myModel" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form id="event-form">
+            <label for="event-name">Event Name:</label>
+            <input type="text" id="event-name" name="event-name" required><br>
+            <label for="event-days">Days of Week:</label><br>
+            <input type="checkbox" name="days[]" value="sunday">Sunday
+            <input type="checkbox" name="days[]" value="monday">Monday
+            <input type="checkbox" name="days[]" value="tuesday">Tuesday
+            <input type="checkbox" name="days[]" value="wednesday">Wednesday
+            <input type="checkbox" name="days[]" value="thursday">Thursday
+            <input type="checkbox" name="days[]" value="friday">Friday
+            <input type="checkbox" name="days[]" value="saturday">Saturday
+            <br><label for="event-color">Text Color:</label>
+            <input type="color" id="event-color" name="event-color">
+            <br>
+            <label for="highlight-color">Highlight Color:</label>
+            <input type="color" id="highlight-color" name="highlight-color" value="#53e8ed">
+            <br>
+            <br><label for="event-description">Description:</label>
+            <textarea id="event-description" name="event-description"></textarea>
+            <br><label for="event-time">Event Time:</label>
+            <input type="time" id="event-time" name="event-time" required>
+            <br><button type="submit" id="update-calendar-button">Add Event</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="event_popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <h2 class="event-title"></h2>
+          <p class="event-description"></p>
+          <p class="event-time"></p>
+          <p class="event-days"></p>
+        </div>
+      </div>
+      <div class="card deadlines">
+        <div class="line line-left"></div>
+        <div class="line line-right"></div>
+        <table>
+          <tbody>
+            <tr>
+              <td id="Sun"></td>
+              <td id="Mon"></td>
+              <td id="Tue"></td>
+              <td id="Wed"></td>
+              <td id="Thurs"></td>
+              <td id="Fri"></td>
+              <td id="Sat"></td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="submit" id="dealines-edit-button" class="edit-button"></button>
+        <button type="submit" id="dealines-erase-button" class="erase-button"></button>
+        <h6>Deadlines</h6> 
+      </div>
+      <div id="deadline-edit-popup" class="popup">
+        <h3>Edit Deadlines</h3>
+        <label for="table-cell">Select a deadline:</label>
+        <select id="table-cell">
+          <option value="Sun">Sunday's deadlines</option>
+          <option value="Mon">Monday's deadlines</option>
+          <option value="Tue">Tuesday's deadlines</option>
+          <option value="Wed">Wednesday's deadlines</option>
+          <option value="Thurs">Thursday's deadlines</option>
+          <option value="Fri">Friday's deadlines</option>
+          <option value="Sat">Saturday's deadlines</option>
+        </select>
+        <br>
+        <label for="text">Enter new text:</label>
+        <input type="text" id="text">
+        <br>
+        <label for="color">Choose a background color:</label>
+        <input type="color" id="color" value="#FFFFFF">
+        <br>
+        <button type="button" id="update-button">Update</button>
+        <button type="button" id="cancel-button">Cancel</button>
+      </div>
+      <div id="deadlines-delete-popup" class="popup">
+        <h3>Erase a deadline</h3>
+        <label for="table-cell">Select a deadline to erase</label>
+        <select id="erase-table-cell">
+          <option value="Sun">Sunday's deadlines</option>
+          <option value="Mon">Monday's deadlines</option>
+          <option value="Tue">Tuesday's deadlines</option>
+          <option value="Wed">Wednesday's deadlines</option>
+          <option value="Thurs">Thursday's deadlines</option>
+          <option value="Fri">Friday's deadlines</option>
+          <option value="Sat">Saturday's deadlines</option>
+        </select>
+        <button type="button" id="deadlines-popup-erase-button">Erase</button>
+      </div>
+      <div class="card to-do-list">
+        <div class="tape"></div>
+        <div id="container">
+          <h2>Todo List:</h2>
+          <ul id="todo-list"></ul>
+          <button type="submit" id="todo-add-button" class="image3-button"></button><br>
+          <button type="submit" id="todo-clear-button" class="image4-button"></button>
+        </div>
+      </div>
+      <div id="add-todo-popup" class="popup">
+        <div class="popup-content">
+          <span class="close-popup">&times;</span>
+          <h2>Add Todo Item:</h2>
+          <form>
+            <label for="new-todo-input">Enter new todo item:</label>
+            <input type="text" id="new-todo-input" required>
+            <br><br>
+            <button type="submit" id="add-todo-button">Add Todo</button>
+          </form>
+        </div>
+      </div>      
+      <div class="card-wrapper">
+        <div class="card upcoming">
+          <div class="tape"></div>
+          <h2>Upcoming:</h2>
+          <div class="upcoming-notes">
+            <p id="Upcoming-info"><b>gvsdf</b></p>
+          </div>
+        </div>
+        <div class="card notes">
+          <div class="tape"></div>
+          <h2>Notes:</h2>
+          <div id="container">
+            <p id="note"><b> Click "Edit" button to edit content. </b></p>
+            <div class="button-container">
+              <button id="note-edit-button" class="image5-button"></button>
+              <button id="note-done-button" class="image6-button"></button>
+            </div>
+          </div>       
+          </div>
+        </div>
+      </div>    
+  </div>
+  </body>
+</html>
