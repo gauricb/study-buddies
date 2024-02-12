@@ -1,6 +1,6 @@
 # StudyBuddies - Full-Stack Time Management Web Application
 
-StudyBuddies is a comprehensive full-stack web application designed to empower students in efficiently managing their schedules, creating to-do lists, setting reminders, and generating custom schedules. Built on a robust tech stack comprising MongoDB, Express.js, Node.js, and Bootstrap, StudyBuddies incorporates key concepts such as browser local storage, networking, HTTP protocols, asynchrony, RESTful API design, and the Fetch API, ensuring a seamless experience in data retrieval and manipulation.
+StudyBuddies is a comprehensive full-stack web application designed to empower students in efficiently managing their schedules, creating to-do lists, setting reminders, and generating custom schedules. Built on a robust tech stack comprising MongoDB, Express.js, Node.js, and Bootstrap.  StudyBuddies incorporates key concepts such as browser local storage, networking, HTTP protocols, asynchrony, RESTful API design, and the Fetch API, ensuring a seamless experience in data retrieval and manipulation.
 
 ## Features
 
