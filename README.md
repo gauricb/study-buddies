@@ -31,10 +31,6 @@ StudyBuddies is a comprehensive full-stack web application designed to empower s
     ```
 
 2. **Install Dependencies**:
-    ```bash
-    cd StudyBuddies
-    npm install
-    ```
 
 3. **Run the Application**:
     ```bash
