@@ -30,7 +30,7 @@ StudyBuddies is a comprehensive full-stack web application designed to empower s
     git clone https://github.com/your-username/TimeBuddy.git
     ```
 
-2. **Install Dependencies**:
+2. **Install Dependencies**
 
 3. **Run the Application**:
     ```bash
