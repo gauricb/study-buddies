@@ -37,7 +37,7 @@ StudyBuddies is a comprehensive full-stack web application designed to empower s
     npm start
     ```
 
-4. **Access TimeBuddy**:
+4. **Access StudyBuddies**:
     Open your browser and go to `http://localhost:3000`.
 
 Feel free to use, modify, and contribute to TimeBuddy to enhance the time management experience for students!
